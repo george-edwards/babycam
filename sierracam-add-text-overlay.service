@@ -1,0 +1,10 @@
+[Unit]
+Description=Add text overlay of how many people are watching the stream
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/python /home/pi/sierracam/add-text-overlay.py
+
+[Install]
+WantedBy=multi-user.target

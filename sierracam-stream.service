@@ -1,0 +1,10 @@
+[Unit]
+Description=Starts SierraCam Stream (Dash chunks sent to RAMDISK)
+
+[Service]
+User=pi
+ExecStart=/home/pi/sierracam/start-stream.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

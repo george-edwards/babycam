@@ -1,0 +1,13 @@
+[Unit]
+Description=Stops the pink/purple colour from the camera feed
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/bin
+ExecStart=vcdbg set awb_mode 0 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
