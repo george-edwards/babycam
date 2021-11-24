@@ -35,6 +35,56 @@ Run the installer
 ~/babycam/install.sh
 ```
 
+Setup cron jobs
+```
+crontab -e
+```
+
+Replace crontab with the following
+```
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+
+SHELL=/bin/bash
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+
+# turn the LED OFF at 8pm each night
+  * 20  *  *  * sudo systemctl start babycam-led-disable.service
+
+# turn the LED ON at 6am each day
+  *  6  *  *  * sudo systemctl stop babycam-led-disable.service
+
+# reboot the system at 2am each day
+  *  2  *  *  * sudo reboot now
+```
+
 Reboot machine
 ```
 sudo reboot now
@@ -52,7 +102,7 @@ http://<ip-address-of-pi>:8071
 
 I suggest setting a DHCP reservation so your raspberry pi's local IP address doesn't change.
 
-## Create a website to send to grandparents
+# Create a website to allow grandparents access
 Register a domain from [Google Domains](https://domains.google.com/registrar/search)
 Setup a Dynamic DNS 'A' record for your domain. Current instructions can be found [here](https://support.google.com/domains/answer/6147083?hl=en)
 Google will issue a random username and password which will be used to update the DNS using client software.
