@@ -11,7 +11,7 @@ sudo mkdir -p /var/lib/motioneye
 sudo cp /home/pi/babycam/motioneye-files/motioneye.conf /etc/motioneye/motioneye.conf
 sudo cp /home/pi/babycam/motioneye-files/motion.conf /etc/motioneye/motion.conf
 sudo cp /home/pi/babycam/motioneye-files/camera-1.conf /etc/motioneye/camera-1.conf
-sudo cp /home/pi/.local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
+sudo cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
 
 echo "Configuring systemd daemons"
 sudo cp /home/pi/babycam/systemd-files/babycam* /lib/systemd/system/
