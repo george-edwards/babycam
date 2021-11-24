@@ -18,12 +18,13 @@ Boot up, log in, then update everything
 sudo apt update && sudo apt upgrade -y
 ```
 
-Turn on the Camera module and expand the filesystem via raspi-config
+Using `raspi-config`, turn on the Camera module, expand the filesystem and increase the memory allocated to the GPU.
 ```
 sudo raspi-config
 ```
 1) Interface > Camera
 2) Advanced > Expand Filesystem
+3) Performance > GPU > 256
 
 Download this repo by cloning it with git
 ```
