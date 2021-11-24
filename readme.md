@@ -19,11 +19,10 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 Turn on the Camera module and expand the filesystem via raspi-config
+1) Interface > Camera
+2) Advanced > Expand Filesystem
 ```
 sudo raspi-config
-# 1) Interface > Camera
-# 2) Advanced > Expand Filesystem
-
 ```
 
 Download this repo by cloning it
