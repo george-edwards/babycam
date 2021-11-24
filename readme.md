@@ -18,10 +18,12 @@ Boot up, log in, then update everything
 sudo apt update && sudo apt upgrade -y
 ```
 
-Turn on the Camera module via raspi-config
+Turn on the Camera module and expand the filesystem via raspi-config
 ```
-# Turn on camera via Interface options
 sudo raspi-config
+# 1) Interface > Camera
+# 2) Advanced > Expand Filesystem
+
 ```
 
 Download this repo by cloning it
