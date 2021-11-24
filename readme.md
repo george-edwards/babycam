@@ -109,8 +109,8 @@ http://<ip-address-of-pi>:8071
 I suggest setting a DHCP reservation so your raspberry pi's local IP address doesn't change.
 
 # Create a website to allow grandparents access
-Register a domain from [Google Domains](https://domains.google.com/registrar/search)
-Setup a Dynamic DNS 'A' record for your domain. Current instructions can be found [here](https://support.google.com/domains/answer/6147083?hl=en)
+Register a domain from [Google Domains](https://domains.google.com/registrar/search).  
+Setup a Dynamic DNS 'A' record for your domain. Current instructions can be found [here](https://support.google.com/domains/answer/6147083?hl=en).  
 Google will issue a random username and password which will be used to update the DNS using client software.
 
 Setup the DNS updating client software on the Raspberry Pi
