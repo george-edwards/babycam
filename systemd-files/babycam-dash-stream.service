@@ -1,0 +1,10 @@
+[Unit]
+Description=Starts BabyCam DASH Stream (Dash chunks sent to RAMDISK)
+
+[Service]
+User=pi
+ExecStart=/home/pi/sierracam/script-files/start-dash-stream.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

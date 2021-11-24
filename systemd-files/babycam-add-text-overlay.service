@@ -4,7 +4,7 @@ Description=Add text overlay of how many people are watching the stream
 [Service]
 Type=simple
 User=pi
-ExecStart=/usr/bin/python /home/pi/sierracam/add-text-overlay.py
+ExecStart=/usr/bin/python /home/pi/babycam/script-files/add-text-overlay.py
 
 [Install]
 WantedBy=multi-user.target

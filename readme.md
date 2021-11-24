@@ -24,26 +24,6 @@ Turn on the Camera module via raspi-config
 sudo raspi-config
 ```
 
-Install dependencies
-```
-sudo apt install git ffmpeg libmariadb3 libpq5 libmicrohttpd12 motion python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev python-pil -y
-```
-
-Install motioneye (via pip)
-```
-pip install motioneye
-```
-
-Perform initial motioneye config
-```
-sudo mkdir -p /etc/motioneye
-sudo mkdir -p /var/lib/motioneye
-sudo cp /usr/local/share/motioneye/extra/motioneye.conf.sample /etc/motioneye/motioneye.conf
-sudo cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
-sudo systemctl daemon-reload
-sudo systemctl enable motioneye
-```
-
 Download this repo by cloning it
 ```
 mkdir -p ~/babycam
@@ -55,7 +35,24 @@ Run the installer
 ~/babycam/install.sh
 ```
 
-## Create a website to send to granparents
+Reboot machine
+```
+sudo reboot now
+```
+
+## Accessing the admin interface and the stream
+Admin interface: 
+```
+http://<ip-address-of-pi>:8765
+```
+Stream: 
+```
+http://<ip-address-of-pi>:8071
+```
+
+I suggest setting a DHCP reservation so your raspberry pi's local IP address doesn't change.
+
+## Create a website to send to grandparents
 Register a domain from [Google Domains](https://domains.google.com/registrar/search)
 Setup a Dynamic DNS 'A' record for your domain. Current instructions can be found [here](https://support.google.com/domains/answer/6147083?hl=en)
 Google will issue a random username and password which will be used to update the DNS using client software.
@@ -102,3 +99,6 @@ And you can test your config using the following:
 ```
 sudo ddclient -query
 ```
+
+And finally, setup a port forward on your home router. Forward all incoming TCP traffic from port `80` to `<ip-address-of-pi>:8071`.
+
