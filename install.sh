@@ -3,7 +3,7 @@ echo "Installing dependencies"
 sudo apt install git ffmpeg libmariadb3 libpq5 libmicrohttpd12 motion python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev python-pil -y
 
 echo "Installing Motioneye"
-pip install motioneye
+sudo pip install motioneye
 
 echo "Configuring Motioneye"
 sudo mkdir -p /etc/motioneye
