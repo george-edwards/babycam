@@ -18,3 +18,6 @@ sudo systemctl enable motioneye
 echo "Configuring systemd daemons"
 sudo cp /home/pi/babycam/systemd-files/babycam* /lib/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable babycam-add-text-overlay.service
+sudo systemctl enable babycam-infrared-cleanup.service
+sudo systemctl enable babycam-led-disable.service
