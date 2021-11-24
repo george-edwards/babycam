@@ -25,8 +25,9 @@ sudo raspi-config
 1) Interface > Camera
 2) Advanced > Expand Filesystem
 
-Download this repo by cloning it
+Download this repo by cloning it with git
 ```
+sudo apt install git -y
 mkdir -p ~/babycam
 git clone https://github.com/george-edwards-code/babycam.git ~/babycam/
 ```
