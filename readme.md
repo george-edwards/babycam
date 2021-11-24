@@ -1,6 +1,7 @@
 # Baby camera with a webstream for the grandparents using a Raspberry Pi
 Creates an MJPEG stream which can be served via a web domain using Motioneye for Python.  
 Contains the number of viewers via a text-overlay on the bottom-left.  
+
 ![screenshot of the babycam feed](https://raw.githubusercontent.com/george-edwards-code/babycam/main/babycam.jpg)
 
 ## Buy the hardware
