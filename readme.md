@@ -92,10 +92,14 @@ sudo reboot now
 
 ## Accessing the admin interface and the stream
 Admin interface: 
+Username: `admin`
+Password: `password`
 ```
 http://<ip-address-of-pi>:8765
 ```
 Stream: 
+Username: `stream`
+Password: `password`
 ```
 http://<ip-address-of-pi>:8071
 ```
