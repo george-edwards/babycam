@@ -163,3 +163,8 @@ sudo ddclient -query
 
 And finally, setup a port forward on your home router. Forward all incoming TCP traffic from port `80` to `<ip-address-of-pi>:8071`.
 
+# Infra-red camera fix
+If you have an infra-red camera and the picture looks purple/pink, then cleanup the image with the following command and reboot:
+```
+sudo systemctl enable babycam-infrared-cleanup.service
+```
